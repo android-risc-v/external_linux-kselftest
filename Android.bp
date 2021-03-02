@@ -71,6 +71,9 @@ cc_test {
         arm: {
             enabled: false,
         },
+        riscv64: {
+            enabled: false,
+        },
         arm64: {
             srcs: [
                 "tools/testing/selftests/breakpoints/breakpoint_test_arm64.c",
@@ -422,12 +425,12 @@ cc_test {
 }
 
 // seccomp test
-cc_test {
-    name: "kselftest_seccomp_tests",
-    relative_install_path: "linux-kselftest/seccomp",
-    srcs: ["tools/testing/selftests/seccomp/seccomp_bpf.c"],
-    defaults: ["kselftest_defaults"],
-}
+//cc_test {
+//    name: "kselftest_seccomp_tests",
+//    relative_install_path: "linux-kselftest/seccomp",
+//    srcs: ["tools/testing/selftests/seccomp/seccomp_bpf.c"],
+//    defaults: ["kselftest_defaults"],
+//}
 
 // size test
 cc_test {
@@ -576,6 +579,9 @@ cc_test {
         arm64: {
             enabled: false,
         },
+        riscv64: {
+            enabled: false,
+        },
         x86: {
             srcs: [
                 "tools/testing/selftests/x86/sysret_ss_attrs.c",
@@ -612,6 +618,9 @@ cc_test {
         arm64: {
             enabled: false,
         },
+        riscv64: {
+            enabled: false,
+        },
     },
     cflags: [
         "-O2",
@@ -646,6 +655,9 @@ cc_test {
         x86: {
             enabled: true,
         },
+        riscv64: {
+            enabled: false,
+        },
     },
 }
 
@@ -669,6 +681,9 @@ cc_test {
     arch: {
         x86: {
             enabled: true,
+        },
+        riscv64: {
+            enabled: false,
         },
     },
 }
